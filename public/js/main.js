@@ -1,1 +1,16 @@
-angular.module('alurapic', ['panelDiretiva', 'ngAnimate']);
+angular.module('alurapic', ['panelDiretiva', 'ngAnimate', 'ngRoute'])
+    .config(function($routeProvider, $locationProvider) {
+
+        $locationProvider.html5Mode(true);
+
+        $routeProvider.when('/fotos', {
+            templateUrl: 'partials/principal.html',
+            controller: 'FotosController'
+        });
+
+        $routeProvider.when('/fotos/new', {
+            templateUrl: 'partials/novo.html'
+        });
+
+        $routeProvider.otherwise({ redirectTo: '/fotos' });
+    });
