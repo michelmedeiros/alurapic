@@ -1,4 +1,4 @@
-angular.module('alurapic', ['panelDiretiva', 'ngAnimate', 'ngRoute'])
+angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
     .config(function($routeProvider, $locationProvider) {
 
         $locationProvider.html5Mode(true);
@@ -9,7 +9,8 @@ angular.module('alurapic', ['panelDiretiva', 'ngAnimate', 'ngRoute'])
         });
 
         $routeProvider.when('/fotos/new', {
-            templateUrl: 'partials/novo.html'
+            templateUrl: 'partials/novo.html',
+            controller: 'FotoController'
         });
 
         $routeProvider.otherwise({ redirectTo: '/fotos' });
