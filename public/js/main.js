@@ -17,6 +17,10 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
             templateUrl: 'partials/novo.html',
             controller: 'FotoController'
         });
+        $routeProvider.when('/grupos', {
+            templateUrl: 'partials/novo.html',
+            controller: 'GruposController'
+        });
 
         $routeProvider.otherwise({ redirectTo: '/fotos' });
     });
