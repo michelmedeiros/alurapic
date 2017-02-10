@@ -26,4 +26,15 @@ angular.module('minhasDiretivas', [])
         ddo.templateUrl = 'js/directives/minha-foto.html';
 
         return ddo;
+    })
+    .directive('meuBotaoPerigo', function() {
+        var ddo = {};
+        ddo.restrict = "E";
+        ddo.scope = {
+            nome: '@',
+            acao: '&'
+        }
+        ddo.templateUrl = 'js/directives/meu-botao-perigo.html';
+
+        return ddo;
     });
