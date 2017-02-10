@@ -28,8 +28,9 @@ angular.module('alurapic')
                 } else {
                     $http.post('v1/fotos', $scope.foto)
                         .success(function() {
-                            $scope.mensagem = "Foto gravada com sucesso";
                             $scope.foto = {};
+                            $scope.formulario.$setPristine();
+                            $scope.mensagem = "Foto gravada com sucesso";
                         })
                         .error(function(erro) {
                             $scope.mensagem = "Erro na gravação dos dados." + erro;
